@@ -14,10 +14,12 @@ import com.abdo.social.dao.RoleDao;
 import com.abdo.social.dao.UserDao;
 import com.abdo.social.entity.Role;
 import com.abdo.social.entity.User;
+import com.abdo.social.user.CrmUser;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
+
 
 @Service
 public class UserServiceImpl implements UserService {
