@@ -59,6 +59,7 @@ public class UserServiceImpl implements UserService {
 		userDao.save(user);
 	}
 
+	 //retrieve the user’s authentication and authorization information. 
 	@Override
 	@Transactional
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
