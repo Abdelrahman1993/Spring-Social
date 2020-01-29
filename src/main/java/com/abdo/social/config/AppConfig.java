@@ -76,6 +76,8 @@ public class AppConfig {
 		securityDataSource.setUser(env.getProperty("jdbc.user"));
 		securityDataSource.setPassword(env.getProperty("jdbc.password"));
 		
+		System.out.println("url>>>>>>>>>>>" + env.getProperty("jdbc.url"));
+		
 		// set connection pool props
 		securityDataSource.setInitialPoolSize(
 		getIntProperty("connection.pool.initialPoolSize"));

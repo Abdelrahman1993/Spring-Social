@@ -1,4 +1,6 @@
 package com.abdo.social.dao;
+
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -20,6 +22,7 @@ public class UserDaoImpl implements UserDao {
 		Session currentSession = sessionFactory.getCurrentSession();
 
 		// now retrieve/read from database using username
+
 		Query<User> theQuery = currentSession.createQuery("from User where userName=:uName", User.class);
 		theQuery.setParameter("uName", theUserName);
 		User theUser = null;
@@ -37,7 +40,7 @@ public class UserDaoImpl implements UserDao {
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 
-		// create the user ... finally LOL
+		
 		currentSession.saveOrUpdate(theUser);
 	}
 
